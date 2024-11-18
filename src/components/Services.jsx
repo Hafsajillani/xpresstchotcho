@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ServiceCard = ({ title, subtitle, features, primaryAction, secondaryAction, imageSrc }) => {
+const ServiceCard = ({ title, subtitle, features, primaryLink, secondaryLink, primaryAction, secondaryAction, imageSrc }) => {
   return (
     <div className='bg-white shadow-lg rounded-lg p-6 relative overflow-hidden'>
     <div className="relative mb-4 flex flex-col items-center">
@@ -22,12 +22,16 @@ const ServiceCard = ({ title, subtitle, features, primaryAction, secondaryAction
           </ul>
     </p>
     <div className="text-base font-sm text-gray-600 mb-3 leading-snug">
-          <button className="text-lg font-medium bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 transition duration-200 w-full">
-            {primaryAction}
-          </button>
-          <button className="text-lg mt-2 font-sm border border-blue-600 text-blue-600 py-3 px-4 rounded-md hover:bg-blue-600 hover:text-white transition duration-200 w-full">
-            {secondaryAction}
-          </button>
+         <a href={primaryLink} target="_blank" rel="noopener noreferrer">
+            <button className="text-lg font-medium bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 transition duration-200 w-full">
+              {primaryAction}
+            </button>
+          </a>
+          <a href={secondaryLink} target="_blank" rel="noopener noreferrer">
+            <button className="text-lg mt-2 font-sm border border-blue-600 text-blue-600 py-3 px-4 rounded-md hover:bg-blue-600 hover:text-white transition duration-200 w-full">
+              {secondaryAction}
+            </button>
+          </a>
         </div>
   </div>
       </div>
@@ -36,11 +40,11 @@ const ServiceCard = ({ title, subtitle, features, primaryAction, secondaryAction
 
 const Services = () => {
   return (
-    <div className="bg-blue-50 mt-12 py-16 px-4 sm:px-8">
+    <div className="bg-white mt-12 mb-12 py-16 px-4 sm:px-8">
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
         {/* Card 1 - Personal Loans */}
         <ServiceCard
-          title="PERSONAL LOANS"
+          title="Personal Loans"
           subtitle="Flexible funding for your needs."
           features={[
             'Quick access to cash',
@@ -49,12 +53,14 @@ const Services = () => {
           ]}
           primaryAction="Check your rate"
           secondaryAction="Apply now"
+          primaryLink="/personal-loan"
+          secondaryLink="/apply-personal-loans"
           imageSrc="/assets/personal.png" 
         />
 
         {/* Card 2 - Car Loan Refinance */}
         <ServiceCard
-          title="CAR LOAN REFINANCE"
+          title="Car Refinance Loan"
           subtitle="Save on your car payments today."
           features={[
             'Lower your monthly payments',
@@ -62,11 +68,13 @@ const Services = () => {
             'Quick and easy process'
           ]}
           primaryAction="Check your rate"
+          primaryLink="/car-refinance"
+          secondaryLink="/apply-car-refinance"
           secondaryAction="Apply now"
           imageSrc="/assets/car-refine.png" 
         />
 
-        {/* Card 3 - Small Business Loan */}
+        {/* Card 3 - Small Business Loan 
         <ServiceCard
           title="SMALL BUSINESS LOAN"
           subtitle="Tailored financing for growth."
@@ -78,9 +86,9 @@ const Services = () => {
           primaryAction="CHECK YOUR RATE"
           secondaryAction="APPLY NOW"
           imageSrc="/assets/loan.png" 
-        />
+        />*/}
 
-        {/* Card 4 - Technology Purchase Loan */}
+        {/* Card 4 - Technology Purchase Loan 
         <ServiceCard
           title="TECHNOLOGY PURCHASE LOAN"
           subtitle="Fund your tech purchases easily."
@@ -92,7 +100,7 @@ const Services = () => {
           primaryAction="CHECK YOUR RATE"
           secondaryAction="APPLY NOW"
           imageSrc="/assets/tech.png" 
-        />
+        />*/}
       </div>
     </div>
   );

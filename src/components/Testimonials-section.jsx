@@ -59,8 +59,8 @@ const Testimonials = () => {
   return (
     <div className="bg-blue-50 py-16 px-4">
       <div className="max-w-8xl mx-auto text-center">
-      <h3 className="text-gray-600 font-semibold text-3xl font-bold mb-2">WHAT OUR
-      <span className='text-blue-600 font-semibold text-4xl ml-2'>CUSTOMER SAY</span></h3>
+      <h3 className="text-gray-900 font-semibold text-3xl font-bold mb-2">What our customers say
+      </h3>
 
         {/* Testimonials slider */}
         <div className='bg-white border border-[#2448E9] rounded-md p-4 shadow-lg max-w-6xl mx-auto mt-8'>
@@ -71,8 +71,8 @@ const Testimonials = () => {
               {[...Array(5)].map((_, index) => (
                 <div
                   key={index}
-                  className="p-1 mx-1" // Padding and margin
-                  style={{ backgroundColor: '#2448E9' }} // Specific green color
+                  className="p-1 mx-1" 
+                  style={{ backgroundColor: '#2448E9' }} 
                 >
                   <SiTrustpilot className="text-white text-lg" /> {/* White star */}
                 </div>
@@ -95,7 +95,7 @@ const Testimonials = () => {
             >
               {testimonials.map((testimonial, index) => (
                 <SwiperSlide key={index}>
-                  <div className="bg-[#D9D9D9] w-120 rounded-sm p-4 shadow-lg text-left h-40 flex flex-col justify-between">
+                  <div className="bg-gray-200 w-120 rounded-sm p-4 shadow-lg text-left h-40 flex flex-col justify-between">
                     <div>
                       <h3 className="font-medium text-sm text-black">{testimonial.name}</h3>
                       <h4 className="font-semibold text-sm text-black mt-1">{testimonial.title}</h4>
@@ -143,7 +143,7 @@ const Testimonials = () => {
         href="/check-rate" 
         className="text-lg mt-6 font-medium bg-blue-600 text-white py-3 px-10 rounded-md hover:bg-blue-700 transition duration-200"
       >
-        CHECK YOUR RATE
+        Check your rate
       </a>
       <div className="mt-1">
         <button className="text-sm font-sm text-gray py-3 px-12 flex items-center">
